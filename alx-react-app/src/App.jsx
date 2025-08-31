@@ -37,7 +37,7 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
-      <UserProfile name="Mwandi" age="24" bio="Loves Sugar and Spice and everything nice" />
+      <UserProfile name="Mwandi" age="24" bio="Loves hiking and photography" />
     </>
   )
 }
