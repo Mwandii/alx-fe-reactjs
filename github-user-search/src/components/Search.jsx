@@ -7,6 +7,8 @@ function SearchComponent() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null);
     const [userData, setUserData] = useState(null)
+    const [location, setLocation] = useState("")
+    const [minRepos, setMinRepos] = useState("") 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,10 +16,12 @@ function SearchComponent() {
         setError(null)
         setUserData(null)
         setSearchInput("")
+        setLocation("")
+        setMinRepos("")
     
 
     try {
-        const data = await fetchUserData(searchInput);
+        const data = await fetchUserData(searchInput, location, minRepos);
         setUserData(data);
     } catch(err) {
         setError("Looks like we cant find the user")
@@ -29,22 +33,29 @@ function SearchComponent() {
     return (
         <>
         <form onSubmit={handleSubmit}>
+            <label>UserName: </label>
             <input type="text" value={searchInput} onChange={(e) => {setSearchInput(e.target.value)}} placeholder="Search here..."/>
+            <label>Location: </label>
+            <input type="text" value={location} onChange={(e) => setLocation(e.target.value)}/>
+            <label>No. Of Repos</label>
+            <input type="number" value={minRepos} onChange={(e) => setMinRepos(e.target.value)}/>
             <button type="submit"  >Search</button>
         </form>
         <div>
             {loading && <p>Loading...</p>}
             {!loading && error && <p>{error}</p>}
-            {!loading && userData && (
+            {!loading && userData && (userData.map(user =>
                 <div>
-                    <img src={userData.avatar_url}
-                    alt={userData.login}
+                    <img src={user.avatar_url}
+                    alt={user.login}
                     width={100}
                     />
-                    <h3>{userData.login}</h3>
-                    <a href={userData.html_url} target="_blank" rel="noreferrer">View profile</a>
+                    <h3>{user.login}</h3>
+                    <a href={user.html_url} target="_blank" rel="noreferrer">View profile</a>
+                    <h3>{user.location}</h3>
+                    <h3>{user.public_repos}</h3>
                 </div>
-            )}
+            ))}
         </div>
         </>
     )
