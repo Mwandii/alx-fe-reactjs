@@ -1,4 +1,4 @@
-import SearchComponent from "./SearchComponent";
+import SearchComponent from "./Search";
 
 function Home() {
     return (
