@@ -37,11 +37,11 @@ function SearchComponent() {
         className="flex flex-col gap-3 sm:flex-row sm:gap-5 px-5 py-5 bg-black"
         >
             <label className="font-semibold text-white">UserName: </label>
-            <input className=" text-white" type="text" value={searchInput} onChange={(e) => {setSearchInput(e.target.value)}} placeholder="Search here..."/>
+            <input className="" type="text" value={searchInput} onChange={(e) => {setSearchInput(e.target.value)}} placeholder="Search here..."/>
             <label className="font-semibold text-white">Location: </label>
-            <input className=" text-white" type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter location..."/>
+            <input className=" " type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter location..."/>
             <label className="font-semibold text-white">No. Of Repos</label>
-            <input className=" text-white" type="number" value={minRepos} onChange={(e) => setMinRepos(e.target.value)} placeholder="Min Repos..."/>
+            <input className="" type="number" value={minRepos} onChange={(e) => setMinRepos(e.target.value)} placeholder="Min Repos..."/>
             <button className="font-semibold text-white" type="submit"  >Search</button>
         </form>
         <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6  gap-6 p-10">
