@@ -34,7 +34,7 @@ function SearchComponent() {
     return (
         <div>
         <form onSubmit={handleSubmit}
-        className="flex justify-between px-5 py-5 bg-black"
+        className="flex flex-col gap-3 sm:flex-row sm:gap-5 px-5 py-5 bg-black"
         >
             <label className="font-semibold text-white">UserName: </label>
             <input className=" text-white" type="text" value={searchInput} onChange={(e) => {setSearchInput(e.target.value)}} placeholder="Search here..."/>
@@ -44,11 +44,11 @@ function SearchComponent() {
             <input className=" text-white" type="number" value={minRepos} onChange={(e) => setMinRepos(e.target.value)} placeholder="Min Repos..."/>
             <button className="font-semibold text-white" type="submit"  >Search</button>
         </form>
-        <div className="flex flex-wrap items-center gap-15 p-10">
+        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6  gap-6 p-10">
             {loading && <p>Loading...</p>}
             {!loading && error && <p>{error}</p>}
             {!loading && userData && (userData.map(user =>
-                <div className="flex flex-col justify-center align-center">
+                <div className="flex flex-col justify-center items-center bg-white rounded-xl shadow-lg p-4">
                     <img src={user.avatar_url}
                     alt={user.login}
                     width={100}
