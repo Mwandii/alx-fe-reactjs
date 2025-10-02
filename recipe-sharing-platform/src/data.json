@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "title": "Beef Stir Fry",
+    "summary": "Tender beef strips seared with fresh veggies and soy sauce for a quick savory Asian dish.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "title": "Vegetable Biryani",
+    "summary": "Fragrant basmati rice layered with spiced mixed vegetables and slow-cooked to perfection.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+  "id": 5,
+  "title": "Margherita Pizza",
+  "summary": "Classic Neapolitan pizza topped with fresh mozzarella, tomatoes, basil and olive oil.",
+  "image": "https://via.placeholder.com/150"
+},
+{
+  "id": 6,
+  "title": "Beef Stroganoff",
+  "summary": "Tender beef strips simmered in a creamy mushroom sauce served over buttery egg noodles.",
+  "image": "https://via.placeholder.com/150"
+},
+{
+  "id": 7,
+  "title": "Pad Thai",
+  "summary": "Stir-fried rice noodles with eggs, tofu, shrimp, peanuts and tamarind-based sauce.",
+  "image": "https://via.placeholder.com/150"
+},
+{
+  "id": 8,
+  "title": "Greek Salad",
+  "summary": "Fresh cucumbers, tomatoes, olives and feta cheese tossed with oregano and olive oil.",
+  "image": "https://via.placeholder.com/150"
+},
+{
+  "id": 9,
+  "title": "Fish Tacos",
+  "summary": "Crispy battered fish wrapped in warm tortillas with slaw, lime crema and fresh salsa.",
+  "image": "https://via.placeholder.com/150"
+}
+
+]
