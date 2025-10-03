@@ -1,9 +1,15 @@
-import { useState } from "react";
-import recipesData from "../data.json"
+import { useEffect, useState } from "react";
 
 function Homepage() {
 
-    const [recipes, setRecipes] = useState(recipesData)
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        fetch("/data.json")
+        .then((res) => res.json())
+        .then((data) => setRecipes(data))
+        .catch((err) => console.error("error loading recipes")) 
+    }, [])
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
