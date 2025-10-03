@@ -3,55 +3,223 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?q=80&w=775&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     "ingredients": [
+    "200g spaghetti",
+    "100g pancetta or bacon",
+    "2 large eggs",
+    "50g Parmesan cheese (grated)",
+    "1 clove garlic (optional)",
+    "Salt to taste",
+    "Freshly ground black pepper"
+  ],
+  "instructions": [
+    "Cook spaghetti in salted boiling water until al dente. Reserve some pasta water.",
+    "Fry pancetta (or bacon) in a pan until crispy. Optionally add garlic, then remove it.",
+    "Whisk eggs with grated Parmesan cheese and black pepper in a bowl.",
+    "Add drained pasta to the pancetta pan off the heat. Pour in egg mixture and toss quickly.",
+    "Use reserved pasta water if needed to make the sauce creamy.",
+    "Serve with extra Parmesan and black pepper on top."
+  ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+    "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "200g yogurt",
+      "2 tbsp tikka spice mix",
+      "1 onion, finely chopped",
+      "2 cloves garlic, minced",
+      "1-inch piece ginger, grated",
+      "400g canned tomatoes",
+      "200ml cream",
+      "2 tbsp vegetable oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and tikka spices for at least 1 hour.",
+      "Grill or pan-fry the chicken until browned.",
+      "In a pan, sauté onion, garlic, and ginger until golden.",
+      "Add tomatoes and cook until thickened.",
+      "Stir in cream, then add chicken and simmer for 10 minutes.",
+      "Serve hot with rice or naan bread."
+    ]
   },
   {
     "id": 3,
     "title": "Beef Stir Fry",
     "summary": "Tender beef strips seared with fresh veggies and soy sauce for a quick savory Asian dish.",
-    "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+    "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+    "ingredients": [
+      "400g beef strips",
+      "1 red bell pepper, sliced",
+      "1 green bell pepper, sliced",
+      "1 carrot, julienned",
+      "2 tbsp soy sauce",
+      "1 tbsp oyster sauce",
+      "2 cloves garlic, minced",
+      "1 tbsp vegetable oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Heat oil in a wok and stir-fry garlic until fragrant.",
+      "Add beef strips and cook until browned.",
+      "Add vegetables and stir-fry for 3–4 minutes.",
+      "Stir in soy sauce and oyster sauce.",
+      "Cook until vegetables are tender-crisp.",
+      "Serve immediately with steamed rice or noodles."
+    ]
   },
   {
     "id": 4,
     "title": "Vegetable Biryani",
     "summary": "Fragrant basmati rice layered with spiced mixed vegetables and slow-cooked to perfection.",
-    "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+    "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+    "ingredients": [
+      "2 cups basmati rice",
+      "1 onion, sliced",
+      "2 cloves garlic, minced",
+      "1-inch piece ginger, grated",
+      "2 carrots, diced",
+      "1 cup peas",
+      "1 cup cauliflower florets",
+      "2 tbsp biryani masala",
+      "3 tbsp vegetable oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Wash and soak rice for 30 minutes, then cook until 70% done.",
+      "Sauté onion, garlic, and ginger until golden.",
+      "Add vegetables and biryani masala, cook for 5 minutes.",
+      "Layer rice and vegetable mixture in a pot.",
+      "Cover and steam on low heat for 20 minutes.",
+      "Serve hot with raita or salad."
+    ]
   },
   {
   "id": 5,
   "title": "Margherita Pizza",
   "summary": "Classic Neapolitan pizza topped with fresh mozzarella, tomatoes, basil and olive oil.",
-  "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+  "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+  "ingredients": [
+      "400g beef strips",
+      "200g mushrooms, sliced",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "200ml sour cream",
+      "2 tbsp flour",
+      "2 tbsp butter",
+      "200ml beef stock",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Sauté onion, garlic, and mushrooms in butter until softened.",
+      "Add beef strips and cook until browned.",
+      "Sprinkle flour and stir for 1 minute.",
+      "Add beef stock and simmer until thickened.",
+      "Stir in sour cream and season with salt and pepper.",
+      "Serve over egg noodles or rice."
+    ]
 },
 {
   "id": 6,
   "title": "Beef Stroganoff",
   "summary": "Tender beef strips simmered in a creamy mushroom sauce served over buttery egg noodles.",
-  "image": "https://images.unsplash.com/photo-1454944338482-a69bb95894af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+  "image": "https://images.unsplash.com/photo-1454944338482-a69bb95894af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+  "ingredients": [
+      "200g rice noodles",
+      "150g shrimp or chicken",
+      "2 eggs",
+      "1 cup bean sprouts",
+      "2 tbsp fish sauce",
+      "1 tbsp tamarind paste",
+      "1 tbsp sugar",
+      "2 tbsp peanuts, crushed",
+      "2 tbsp vegetable oil",
+      "1 lime, cut into wedges"
+    ],
+    "instructions": [
+      "Soak rice noodles in warm water until soft.",
+      "Heat oil in a pan, scramble eggs, then set aside.",
+      "Stir-fry shrimp or chicken until cooked.",
+      "Add noodles, fish sauce, tamarind, and sugar.",
+      "Mix in eggs and bean sprouts.",
+      "Top with crushed peanuts and lime wedges before serving."
+    ]
 },
 {
   "id": 7,
   "title": "Pad Thai",
   "summary": "Stir-fried rice noodles with eggs, tofu, shrimp, peanuts and tamarind-based sauce.",
-  "image": "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+  "image": "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+  "ingredients": [
+      "2 cucumbers, diced",
+      "3 tomatoes, chopped",
+      "1 red onion, sliced",
+      "100g feta cheese, cubed",
+      "50g black olives",
+      "2 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "Salt and oregano to taste"
+    ],
+    "instructions": [
+      "Chop cucumbers, tomatoes, and onion.",
+      "Combine in a bowl with feta cheese and olives.",
+      "Drizzle olive oil and lemon juice.",
+      "Sprinkle oregano and salt.",
+      "Toss gently and serve fresh."
+    ]
 },
 {
   "id": 8,
   "title": "Greek Salad",
   "summary": "Fresh cucumbers, tomatoes, olives and feta cheese tossed with oregano and olive oil.",
-  "image": "https://images.unsplash.com/photo-1460306855393-0410f61241c7?q=80&w=873&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  "image": "https://images.unsplash.com/photo-1460306855393-0410f61241c7?q=80&w=873&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "ingredients": [
+      "2 cucumbers, diced",
+      "3 tomatoes, chopped",
+      "1 red onion, sliced",
+      "100g feta cheese, cubed",
+      "50g black olives",
+      "2 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "Salt and oregano to taste"
+    ],
+    "instructions": [
+      "Chop cucumbers, tomatoes, and onion.",
+      "Combine in a bowl with feta cheese and olives.",
+      "Drizzle olive oil and lemon juice.",
+      "Sprinkle oregano and salt.",
+      "Toss gently and serve fresh."
+    ]
 },
 {
   "id": 9,
   "title": "Fish Tacos",
   "summary": "Crispy battered fish wrapped in warm tortillas with slaw, lime crema and fresh salsa.",
-  "image": "https://images.unsplash.com/photo-1539136788836-5699e78bfc75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+  "image": "https://images.unsplash.com/photo-1539136788836-5699e78bfc75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzR8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+  "ingredients": [
+      "400g white fish fillets",
+      "1 cup flour",
+      "1 tsp paprika",
+      "1 tsp cumin",
+      "8 small tortillas",
+      "1 cup shredded cabbage",
+      "1/2 cup salsa",
+      "1/2 cup sour cream",
+      "2 tbsp lime juice",
+      "Vegetable oil for frying"
+    ],
+    "instructions": [
+      "Mix flour with paprika and cumin for coating.",
+      "Dredge fish in flour mixture and fry until golden.",
+      "Warm tortillas in a pan.",
+      "Assemble tacos with fish, cabbage, salsa, and sour cream.",
+      "Drizzle lime juice and serve immediately."
+    ]
 }
 
 ]

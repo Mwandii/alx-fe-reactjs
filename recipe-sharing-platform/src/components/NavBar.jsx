@@ -1,12 +1,14 @@
+import { Link } from "react-router";
+
 function NavBar() {
     return (
         <nav className="flex justify-between p-3 bg-gray-900 text-white">
             <div>
-            <h1>Foood!</h1>
+            <Link to={"/"}><h1 className="cursor-pointer">Foood!</h1></Link>
             </div>
             <div>
-                <a className="m-3">All Recipes</a>
-                <a className="m-3">Contact Us</a>
+                <Link className="m-3 cursor-pointer" to={"/"}>All Recipes</Link>
+                <Link className="m-3 cursor-pointer">Contact Us</Link>
             </div>
         </nav>
     )

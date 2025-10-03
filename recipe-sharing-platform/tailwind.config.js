@@ -4,9 +4,13 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media",
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        poppins: ["Cormorant Garamond", serif],
+      },
+    },
   },
   plugins: [],
 }
