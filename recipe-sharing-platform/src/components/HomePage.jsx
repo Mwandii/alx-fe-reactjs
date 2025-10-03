@@ -6,7 +6,7 @@ function Homepage() {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch("/data.json")
+        fetch("/src/data.json")
         .then((res) => res.json())
         .then((data) => setRecipes(data))
         .catch((err) => setError("Failed to load Recipes")) 
