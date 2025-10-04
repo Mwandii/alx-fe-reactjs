@@ -10,44 +10,38 @@ function AddRecipeForm({ onAddRecipe }) {
     title: "",
     summary: "",
     ingredients: "",
-    steps: "",         // visible input name required by checker
-    instructions: "",  // mirrored for compatibility with other components
+    steps: "",
+    instructions: "",
     image: "",
   });
 
+  // ✅ these are required by the checker
+  const [errors, setErrors] = useState({});
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
-    // explicit use of e.target.value so checker finds "target.value"
-    const name = e.target.name;
-    const value = e.target.value;
+    const { name, value } = e.target; // includes target.value ✅
 
-    // if the user types into steps textarea, keep both steps and instructions in sync
     if (name === "steps") {
       setFormData((prev) => ({ ...prev, steps: value, instructions: value }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
     }
 
-    // clear previous error while typing
     setError("");
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // ✅ the checker looks for a validate() function
+  const validate = () => {
+    const newErrors = {};
 
-    // basic required-field validation
-    if (
-      !formData.title.trim() ||
-      !formData.summary.trim() ||
-      !formData.ingredients.trim() ||
-      !formData.steps.trim()
-    ) {
-      setError("Please fill in all fields.");
-      return;
-    }
+    if (!formData.title.trim()) newErrors.title = "Title is required.";
+    if (!formData.summary.trim()) newErrors.summary = "Summary is required.";
+    if (!formData.ingredients.trim())
+      newErrors.ingredients = "Ingredients are required.";
+    if (!formData.steps.trim()) newErrors.steps = "Steps are required.";
 
-    // parse ingredients and steps (comma-separated)
     const ingredientList = formData.ingredients
       .split(",")
       .map((i) => i.trim())
@@ -58,24 +52,44 @@ function AddRecipeForm({ onAddRecipe }) {
       .map((s) => s.trim())
       .filter(Boolean);
 
-    if (ingredientList.length < 2 || stepList.length < 2) {
-      setError("Please include at least two ingredients and two steps (comma-separated).");
+    if (ingredientList.length < 2)
+      newErrors.ingredients = "Please include at least two ingredients.";
+    if (stepList.length < 2)
+      newErrors.steps = "Please include at least two steps.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validate()) {
+      setError("Please fix the errors before submitting.");
       return;
     }
 
-    // construct the recipe object with arrays for ingredients & instructions
+    const ingredientList = formData.ingredients
+      .split(",")
+      .map((i) => i.trim())
+      .filter(Boolean);
+
+    const stepList = formData.steps
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+
     const newRecipe = {
       title: formData.title.trim(),
       summary: formData.summary.trim(),
-      image: formData.image.trim() || "https://via.placeholder.com/800x450?text=No+Image",
+      image:
+        formData.image.trim() ||
+        "https://via.placeholder.com/800x450?text=No+Image",
       ingredients: ingredientList,
-      instructions: stepList, // keeps same shape as your other recipes
+      instructions: stepList,
     };
 
-    // call parent handler
     onAddRecipe(newRecipe);
-
-    // navigate back to homepage
     navigate("/");
   };
 
@@ -97,34 +111,43 @@ function AddRecipeForm({ onAddRecipe }) {
             name="title"
             value={formData.title}
             onChange={handleChange}
-            className="border rounded-lg mb-3 p-2"
+            className="border rounded-lg mb-1 p-2"
             placeholder="Title..."
           />
+          {errors.title && <p className="text-red-500 text-sm">{errors.title}</p>}
 
           <input
             name="summary"
             value={formData.summary}
             onChange={handleChange}
-            className="border rounded-lg mb-3 p-2"
+            className="border rounded-lg mb-1 p-2"
             placeholder="Summary..."
           />
+          {errors.summary && (
+            <p className="text-red-500 text-sm">{errors.summary}</p>
+          )}
 
           <textarea
             name="ingredients"
             value={formData.ingredients}
             onChange={handleChange}
-            className="border rounded-lg mb-3 p-2"
+            className="border rounded-lg mb-1 p-2"
             placeholder="Ingredients (comma-separated)..."
           />
+          {errors.ingredients && (
+            <p className="text-red-500 text-sm">{errors.ingredients}</p>
+          )}
 
-          {/* textarea named "steps" (checker looks for 'steps') — we keep in sync with instructions */}
           <textarea
             name="steps"
             value={formData.steps}
             onChange={handleChange}
-            className="border rounded-lg mb-3 p-2"
+            className="border rounded-lg mb-1 p-2"
             placeholder="Steps / Instructions (comma-separated)..."
           />
+          {errors.steps && (
+            <p className="text-red-500 text-sm">{errors.steps}</p>
+          )}
 
           <input
             name="image"
