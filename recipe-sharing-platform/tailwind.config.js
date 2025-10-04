@@ -7,8 +7,11 @@ export default {
   darkMode: "media",
   theme: {
     extend: {
-       fontFamily: {
-        poppins: ["Cormorant Garamond", serif],
+      fontFamily: {
+        'cormorant': ['"Cormorant Garamond"', 'serif'],
+        'raleway' : ['"Raleway", sans-serif'],
+        'nunito' : ['"Nunito", sans-serif'],
+        'montserrat' : ['"Montserrat", sans-serif;']
       },
     },
   },

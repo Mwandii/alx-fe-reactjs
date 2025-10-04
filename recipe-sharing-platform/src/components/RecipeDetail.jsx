@@ -25,12 +25,14 @@ function RecipeDetail() {
   if (!recipeDetails) return <p>loading...</p>;
 
   return (
-    <>
+    <div className="bg-stone-200 m-0 pb-6">
       <NavBar />
-      <div className="flex flex-col justify-center items-center">
+      <div className=" font-montserrat ">
         <div>
-          <img className="mt-10 mx-auto rounded-3xl shadow-xl" src={recipeDetails.image} alt={recipeDetails.title} />
-          <div>
+          <div className="flex flex-col justify-center items-center  p-10">
+          <img className="rounded-3xl shadow-xl" src={recipeDetails.image} alt={recipeDetails.title} />
+          </div>
+          <div className="bg-white rounded-xl shadow-lg mx-10 my-5 p-5">
             <h2 className="text-2xl font-bold p-2 mt-5" >{recipeDetails.title}</h2>
             <h3 className="font-semibold text-lg p-2" >Ingredients</h3>
             <ul>
@@ -39,8 +41,8 @@ function RecipeDetail() {
               ))}
             </ul>
           </div>
-          <div>
-            <h3>Instructions</h3>
+          <div className="bg-white rounded-xl shadow-lg mx-10 mt-5 p-5">
+            <h3 className="font-semibold m-2">Instructions</h3>
             <ol>
               {recipeDetails.instructions.map((step, index) => (
                 <li key={index}>{step}</li>
@@ -49,7 +51,7 @@ function RecipeDetail() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
