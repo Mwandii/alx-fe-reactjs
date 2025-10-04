@@ -1,30 +1,14 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 
-function Homepage() {
-  const [recipes, setRecipes] = useState([]);
-  const [error, setError] = useState(null);
 
-
-  
-
-
-  useEffect(() => {
-    fetch("/src/data.json")
-      .then((res) => res.json())
-      .then((data) => setRecipes(data))
-      .catch((err) => setError("Failed to load Recipes"));
-  }, []);
+function Homepage({recipes}) {
 
   return (
     <>
     <NavBar/>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 font-montserrat bg-stone-200 ">
-      {error ? (
-        <p>{error}</p>
-      ) : (
-        recipes.map((recipe) => (
+       { recipes.map((recipe) => (
           <div className="bg-white shadow-md rounded-lg" key={recipe.id}>
             <img
               className="w-full h-48 object-cover"
@@ -41,7 +25,7 @@ function Homepage() {
             </div>
           </div>
         ))
-      )}
+      }
     </div>
     </>
   );
